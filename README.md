@@ -15,49 +15,77 @@ TBD | Voyage-8 | https://chingu.io/
 **Stack**
 
 
-## Getting Started
-1. Clone this repo by running `git clone` command in your terminal with the URL from your repo. 
+# Getting Started
+Clone team repo by running `git clone` command in your terminal with the URL from your repo. 
 It should look something like this: 
 `git clone https://github.com/chingu-voyages/v8-geckos-team-11.git`
 
-This URL above is also referred as `origin` on your local machine. 
+This URL above is also referred to as `origin` on your local machine. 
 
 
 # Git Workflow
 
-1. From inside your local directory, git the branches and their commits from origin:
+1. From inside your local directory, get all branches and their commits from origin:
 `git fetch origin`
 
-2. Merge the changes from `origin/dev` to your local branch:
+2. Merge changes from `origin/dev` to your local branch:
 `git merge origin/dev`
 
 Now you are ready to make your own changes!
 
-3. Create a separete branch: `git checkout -b <branch name/short-description>
+3. Create a working branch: 
+`git checkout -b <branch name/short-description>`
 
 **Naming branches**
 Name branches by type (**bug**, **feature**, **refactor**, or **style**) followed by a short description.  
-Examples of branch names via [@Kornil](https://medium.com/@francesco.agnoletto/how-to-not-f-up-your-local-files-with-git-part-1-e0756c88fd3c):
+Examples of branch names with descriptions: via [@Kornil](https://medium.com/@francesco.agnoletto/how-to-not-f-up-your-local-files-with-git-part-1-e0756c88fd3c):
  - bug/fixed-all-caps
  - feature/giant-duck-modal
  - refactor/add-prop-types
  - style/everything-is-black
  
- 4. Save and commit stage changes:
-   a. stage new files and modification
-   `git add .` Stage all new/modified/deleted files
-       or
-   `git add <file name>` stage a specific file that was created/modified/deleted
+ 5. Stage and commit changes:
+   a. there are 2 options:
+    i. stage and commit **all** new/modified/deleted files 
+    `git add .` 
+    ii. stage and commit a **specific** new/modified/deleted file
+    `git add <file name>` 
   
    b. commit new files:
-   commit message should be atomic and written in atomic mood(like giving an order)
+   commit message should be atomic and written in imperative mood(giving a direct command or request)
    `git commit -m <message here>`
    
    Example of commit message via: https://chris.beams.io/posts/git-commit/#imperative
-   `git commit -m "update getting started documentation"
+   `git commit -m "update getting started documentation"`
    
- 4. Once you have save and commit your change, fetch the latest code again:
+ 6. Once you have saved and committed your changes, fetch the latest code again:
+ ```
+ git checkout dev
+ git fetch origin
+ ```
  
+ 7. Switch back to the branch you were working on and merge
+ ```
+ git checkout <your branch name>
+ git merge origin /dev
+ ```
+ 
+ 8. Fix any conflicts and push your new branch to origin"
+ `git push origin <your branch name>`
+
+ 9. In your team repo on Github, make a pull request from working branch against `dev` branch. 
+ 
+ ## Pulling an individual working branch 
+ 1. Get all branches and commits from origin:
+ `git fetch origin`
+ 
+ 2. Create the working branch if it does not exist yet
+ `git checkout -b origin/<other branch name>`
+ 
+ 3. If working already exist locally:
+ `git checkout <other branch name>`
+ 
+ 4. Make chagnes and repeat **step 5** to **step 9** from above  
 
 
 
