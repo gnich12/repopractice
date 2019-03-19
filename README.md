@@ -44,48 +44,47 @@ Examples of branch names with descriptions: via [@Kornil](https://medium.com/@fr
  - refactor/add-prop-types
  - style/everything-is-black
  
- 5. Stage and commit changes:
-   a. there are 2 options:
-    i. stage and commit **all** new/modified/deleted files 
-    `git add .` 
-    ii. stage and commit a **specific** new/modified/deleted file
-    `git add <file name>` 
+4. Stage changes(there are 2 options):\
+ a. stage and commit **all** new/modified/deleted files\
+ `git add .` 
+ b. stage and commit a **specific** new/modified/deleted file\
+ `git add <file name>`\
   
-   b. commit new files:
-   commit message should be atomic and written in imperative mood(giving a direct command or request)
-   `git commit -m <message here>`
-   
-   Example of commit message via: https://chris.beams.io/posts/git-commit/#imperative
-   `git commit -m "update getting started documentation"`
-   
- 6. Once you have saved and committed your changes, fetch the latest code again:
- ```
- git checkout dev
- git fetch origin
- ```
- 
- 7. Switch back to the branch you were working on and merge
- ```
- git checkout <your branch name>
- git merge origin /dev
- ```
- 
- 8. Fix any conflicts and push your new branch to origin"
- `git push origin <your branch name>`
+5. Commit changes:
+commit message should be atomic and written in imperative mood(giving a direct command or request)\
+`git commit -m <message here>`\
 
- 9. In your team repo on Github, make a pull request from working branch against `dev` branch. 
+Example of commit message via: https://chris.beams.io/posts/git-commit/#imperative \
+`git commit -m "update getting started documentation"`
+   
+6. Once you have saved and committed your changes, fetch the latest code again:
+```
+git checkout dev
+git fetch origin
+```
  
- ## Pulling an individual working branch 
- 1. Get all branches and commits from origin:
- `git fetch origin`
+7. Switch back to the branch you were working on and merge
+```
+git checkout <your branch name>
+git merge origin /dev
+```
  
- 2. Create the working branch if it does not exist yet
+8. Fix any conflicts and push your new branch to origin"
+`git push origin <your branch name>`
+
+9. In your team repo on Github, make a pull request from working branch against `dev` branch. 
+ 
+## Pulling an individual working branch 
+1. Get all branches and commits from origin:
+`git fetch origin`
+ 
+2. Create the working branch if it does not exist yet
  `git checkout -b origin/<other branch name>`
  
- 3. If working already exist locally:
- `git checkout <other branch name>`
+3. If working already exist locally:
+`git checkout <other branch name>`
  
- 4. Make chagnes and repeat **step 5** to **step 9** from above  
+4. Make changes and repeat **step 5** to **step 9** from above  
 
 
 
