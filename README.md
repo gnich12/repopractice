@@ -66,7 +66,7 @@ git fetch origin
 7. Switch back to the branch you were working on and merge
 ```
 git checkout <your branch name>
-git merge origin /dev
+git merge origin/dev
 ```
  
 8. Fix any conflicts and push your new branch to origin  
